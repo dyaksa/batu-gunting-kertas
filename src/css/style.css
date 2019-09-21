@@ -95,8 +95,20 @@ header h1 {
     border: 2px solid white;
 }
 
-.row h1#hasil {
-    font-style: italic;
+.display-inline-block {
+    display: inline-block;
+}
+
+.display-none {
+    display: none;
+}
+
+.hasil {
+    background-color: white;
+    color: black;
     text-transform: uppercase;
-    transition: 0.7s;
+    font-weight: bold;
+    padding: 20px;
+    border: 3px solid lightcoral;
+    border-radius: 10px;
 }
