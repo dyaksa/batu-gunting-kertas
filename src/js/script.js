@@ -1,12 +1,21 @@
 const btn1 = document.querySelectorAll('.row button');
+let scoreP = 0;
+let scoreC = 0;
 
 btn1.forEach(function (btn) {
     btn.addEventListener('click', function () {
         let comp = pilihanComp();
         let p = btn.getAttribute('value');
-        let pesan = document.querySelector('div.hasil');
-        pesan.classList.replace('display-none', 'display-inline-block');
-        document.querySelector('.hasil p').innerHTML = hasil(comp, p);
+        let pesan = hasil(comp, p);
+        document.querySelector('div.hasil').classList.replace('display-none', 'display-inline-block');
+        document.querySelector('.hasil p').innerHTML = 'Anda ' + pesan;
+        //menambahkan score
+        if (pesan === 'menang') {
+            scoreP++;
+        } else if (pesan === 'kalah') {
+            scoreC++;
+        }
+        document.getElementById('score').innerHTML = scoreP + ' - ' + scoreC;
     });
 });
 
