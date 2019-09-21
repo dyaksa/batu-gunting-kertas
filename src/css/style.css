@@ -94,3 +94,9 @@ header h1 {
     background-color: rgba(47, 77, 119, 0.5);
     border: 2px solid white;
 }
+
+.row h1#hasil {
+    font-style: italic;
+    text-transform: uppercase;
+    transition: 0.7s;
+}
